@@ -1,0 +1,3 @@
+#!/bin/bash
+mvn clean wildfly:undeploy wildfly:deploy -Dmaven.test.skip=true
+

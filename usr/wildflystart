@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$WILDFLY_HOME/bin/./standalone.sh
