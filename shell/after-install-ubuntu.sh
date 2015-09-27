@@ -15,6 +15,8 @@ curl -Lo- https://bit.ly/janus-bootstrap | bash
 apt-get install build-essential libssl-dev
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.27.1/install.sh | bash
 
-apt-get install libicu-dev
+# corrige bug do npm install fonte: http://stackoverflow.com/questions/21155922/error-installing-node-gyp-on-ubuntu
+apt-get install libicu-dev -y
+
 git config --global user.name clairtonluz
 git config --global user.email clairton.c.l@gmail.com
