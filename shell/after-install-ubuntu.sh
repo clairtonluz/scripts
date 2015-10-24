@@ -18,6 +18,7 @@
   apt-get install rake -y
   apt-get install mongodb -y
   apt-get install gimp -y
+  apt-get install chromium-browser -y
   apt-get install nautilus-open-terminal -y
   #INSTALL VIM JANUS
   curl -Lo- https://bit.ly/janus-bootstrap | bash
