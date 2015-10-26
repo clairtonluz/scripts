@@ -1,13 +1,4 @@
 #!/bin/bash
-{
-  echo "This script requires superuser access to install apt packages."
-  echo "You will be prompted for your password by sudo."
-
-  # clear any previous sudo permission
-  sudo -k
-
-  # run inside sudo
-  sudo bash <<SCRIPT
   apt-get update -y
   apt-get upgrade -y
   apt-get dist-upgrade -y
@@ -32,5 +23,3 @@
   git config --global user.name clairtonluz
   git config --global user.email clairton.c.l@gmail.com
   git config --global credential.helper 'cache --timeout=28800'
-SCRIPT
-}
