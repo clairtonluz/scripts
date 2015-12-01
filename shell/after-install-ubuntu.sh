@@ -19,6 +19,9 @@
 
   # corrige bug do npm install fonte: http://stackoverflow.com/questions/21155922/error-installing-node-gyp-on-ubuntu
   apt-get install libicu-dev -y
+  
+  # instalando jdk
+  sudo wget -qO- https://gist.githubusercontent.com/clairtonluz/4bcf916490b155388104/raw/93e51bd6d696441932c58746c8859b66b4716d3c/java-setup.sh | sh
 
   git config --global user.name clairtonluz
   git config --global user.email clairton.c.l@gmail.com
