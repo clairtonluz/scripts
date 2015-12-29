@@ -26,3 +26,5 @@
   git config --global user.name clairtonluz
   git config --global user.email clairton.c.l@gmail.com
   git config --global credential.helper 'cache --timeout=28800'
+
+  echo 'export EDITOR=/usr/bin/vim' >> ~/.bashrc
