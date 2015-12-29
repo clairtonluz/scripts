@@ -31,3 +31,8 @@
 
   # adicionando alias para comandos do git
   curl https://gist.githubusercontent.com/clairtonluz/11374890/raw/55da20136c7964f031796d8bf645e93d7de533f8/alias.sh >> ~/.bashrc 
+
+  nvm install v5.3.0
+  nvm alias default 5.3.0
+  npm install bower -g
+  chown -R clairton.clairton .nvm/
