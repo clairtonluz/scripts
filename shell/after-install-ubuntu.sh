@@ -28,3 +28,6 @@
   git config --global credential.helper 'cache --timeout=28800'
 
   echo 'export EDITOR=/usr/bin/vim' >> ~/.bashrc
+
+  # adicionando alias para comandos do git
+  curl https://gist.githubusercontent.com/clairtonluz/11374890/raw/55da20136c7964f031796d8bf645e93d7de533f8/alias.sh >> ~/.bashrc 
