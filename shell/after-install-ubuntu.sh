@@ -36,3 +36,7 @@
   nvm alias default 5.3.0
   npm install bower -g
   chown -R clairton.clairton .nvm/
+  
+  # correção de bug do intellij que trava o input do teclado.
+  echo 'export IBUS_ENABLE_SYNC_MODE=1' >> ~/.profile
+  
