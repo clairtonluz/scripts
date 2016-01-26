@@ -15,7 +15,7 @@
   curl -Lo- https://bit.ly/janus-bootstrap | bash
   # INSTALL NVM
   apt-get install build-essential libssl-dev
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.27.1/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
 
   # corrige bug do npm install fonte: http://stackoverflow.com/questions/21155922/error-installing-node-gyp-on-ubuntu
   apt-get install libicu-dev -y
@@ -32,8 +32,8 @@
   # adicionando alias para comandos do git
   curl https://gist.githubusercontent.com/clairtonluz/11374890/raw/55da20136c7964f031796d8bf645e93d7de533f8/alias.sh >> ~/.bashrc 
 
-  nvm install v5.3.0
-  nvm alias default 5.3.0
+  nvm install v5.5.0
+  nvm alias default 5.5.0
   npm install bower -g
   chown -R clairton.clairton .nvm/
   
