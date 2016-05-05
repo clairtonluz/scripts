@@ -3,6 +3,8 @@
   apt-get upgrade -y
   apt-get dist-upgrade -y
   sudo apt-get install git geany htop vim rake mongodb gimp chromium-browser unity-tweak-tool -y
+  # PACOTE DE CODECS
+  sudo apt-get install ubuntu-restricted-extras -y
   #INSTALL VIM JANUS
   curl -Lo- https://bit.ly/janus-bootstrap | bash
   # INSTALL NVM
