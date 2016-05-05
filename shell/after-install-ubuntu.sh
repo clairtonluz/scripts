@@ -2,15 +2,7 @@
   apt-get update -y
   apt-get upgrade -y
   apt-get dist-upgrade -y
-  apt-get install git -y
-  apt-get install geany -y
-  apt-get install htop -y
-  apt-get install vim -y
-  apt-get install rake -y
-  apt-get install mongodb -y
-  apt-get install gimp -y
-  apt-get install chromium-browser -y
-  apt-get install nautilus-open-terminal -y
+  sudo apt-get install git geany htop vim rake mongodb gimp chromium-browser unity-tweak-tool -y
   #INSTALL VIM JANUS
   curl -Lo- https://bit.ly/janus-bootstrap | bash
   # INSTALL NVM
@@ -39,4 +31,3 @@
   
   # correção de bug do intellij que trava o input do teclado.
   echo 'export IBUS_ENABLE_SYNC_MODE=1' >> ~/.profile
-  
