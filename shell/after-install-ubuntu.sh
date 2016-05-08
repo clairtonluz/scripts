@@ -15,7 +15,7 @@
   apt-get install libicu-dev -y
   
   # instalando jdk
-  sudo wget -qO- https://gist.githubusercontent.com/clairtonluz/4bcf916490b155388104/raw/93e51bd6d696441932c58746c8859b66b4716d3c/java-setup.sh | sh
+  sudo wget -qO- https://gist.githubusercontent.com/clairtonluz/4bcf916490b155388104/raw/d2e6cc0128b0a653e638c56da2378bd8be56ae8c/java-setup.sh | sh
 
   git config --global user.name clairtonluz
   git config --global user.email clairton.c.l@gmail.com
