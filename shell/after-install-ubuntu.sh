@@ -9,13 +9,21 @@
   curl -Lo- https://bit.ly/janus-bootstrap | bash
   # INSTALL NVM
   apt-get install build-essential libssl-dev
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
   # corrige bug do npm install fonte: http://stackoverflow.com/questions/21155922/error-installing-node-gyp-on-ubuntu
   apt-get install libicu-dev -y
   
-  # instalando jdk
-  sudo wget -qO- https://gist.githubusercontent.com/clairtonluz/4bcf916490b155388104/raw/d2e6cc0128b0a653e638c56da2378bd8be56ae8c/java-setup.sh | sh
+  # instalando oracle jdk
+  sudo apt-get install python-software-properties
+  sudo add-apt-repository ppa:webupd8team/java
+  sudo apt-get update
+  #jdk6
+  sudo apt-get install oracle-java6-installer
+  #jdk7
+  sudo apt-get install oracle-java7-installer
+  #jdk8
+  sudo apt-get install oracle-java8-installer
 
   git config --global user.name clairtonluz
   git config --global user.email clairton.c.l@gmail.com
