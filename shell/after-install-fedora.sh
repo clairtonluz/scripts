@@ -29,3 +29,9 @@ git config --global credential.helper 'cache --timeout=29800'
 
 # Vim como editor padrão
  echo 'export EDITOR=/usr/bin/vim' >> ~/.bashrc
+
+# Desabilitar alguns atalhos usado na IDEs de desenvolvimento
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Super><Shift>Page_Up']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Super><Shift>Page_Down']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Super>Page_Up']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Super>Page_Down']"
