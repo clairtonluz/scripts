@@ -1,34 +1,43 @@
 # atualizar sistema
 sudo dnf update -y
-sudo dnf upgrade -y
-sudo dnf dist-upgrade -y
 
-# RPM Fusion no Fedora 29
-sudo dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-29.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-29.noarch.rpm
-
-# Instale os codecs multimídia do RPM Fusion
-sudo dnf install amrnb amrwb faad2 flac ffmpeg gpac-libs lame libfc14audiodecoder mencoder mplayer x264 x265 gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-rtsp gstreamer-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-plugins-base gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good
-
-sudo dnf -y install vim git geany htop gimp wine
+sudo dnf -y install vim git htop gimp zsh java-1.8.0-openjdk-devel java-11-openjdk-devel
 
 # Google Chrome
 sudo dnf install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
-# NVM
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-
-# instala a ultima versão LTS do node
-nvm install --lts
-
-# configuração global para o GIT
-
-git config --global user.name clairtonluz
+git config --global user.name "Clairton Luz"
 git config --global user.email clairton.c.l@gmail.com
-# salva a senha por 8 horas
-git config --global credential.helper 'cache --timeout=29800'
+git config --global credential.helper store
+
+# Install docker
+sudo dnf -y install dnf-plugins-core
+
+sudo dnf config-manager \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo
+
+sudo dnf install docker-ce docker-ce-cli containerd.io
+
+# Oh My ZSH
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# plugins=(
+#         git 
+#         docker 
+#         docker-compose
+#         gradle
+#         vscode
+#         fedora
+#         dnf
+#         node
+#         npm
+#         asdf
+# )
+
 
 # Vim como editor padrão
  echo 'export EDITOR=/usr/bin/vim' >> ~/.bashrc
+ echo 'export EDITOR=/usr/bin/vim' >> ~/.zshrc
 
 # Desabilitar alguns atalhos usado na IDEs de desenvolvimento
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Super><Shift>Page_Up']"
