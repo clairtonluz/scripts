@@ -1,7 +1,14 @@
 # atualizar sistema
 sudo dnf update -y
 
-sudo dnf -y install vim git htop gimp zsh java-1.8.0-openjdk-devel java-11-openjdk-devel
+sudo dnf -y install vim git htop gimp zsh java-1.8.0-openjdk-devel java-11-openjdk-devel 
+
+# install snap 
+sudo dnf -y install snapd
+sudo ln -s /var/lib/snapd/snap /snap
+
+# install insomnia
+sudo snap install insomnia
 
 # Google Chrome
 sudo dnf install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
