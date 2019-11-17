@@ -19,6 +19,11 @@ sudo dnf config-manager \
 
 sudo dnf install docker-ce docker-ce-cli containerd.io
 
+# If you use fedora 31 you need change fedora vgroup2 to vgroup1 with this command
+# otherwise docker will not works
+sudo dnf install grubby
+sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+
 # Oh My ZSH
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # plugins=(
@@ -44,3 +49,5 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Super><S
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Super><Shift>Page_Down']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Super>Page_Up']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Super>Page_Down']"
+
+
